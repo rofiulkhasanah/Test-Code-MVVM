@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.view.home.GalleryFragment">
+
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/serch_gallery"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:layout_marginTop="20dp"
+            app:boxBackgroundColor="@color/white"
+            app:endIconMode="none"
+            app:hintEnabled="false"
+            android:hint="Search ..."
+            app:layout_constraintTop_toBottomOf="@id/input_email">
+
+            <AutoCompleteTextView
+                android:id="@+id/edt_search_gallery"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#00ffffff"
+                android:gravity="center|start"
+                android:imeOptions="actionDone"
+                android:hint="Search ..."
+                android:inputType="textEmailAddress"
+                android:paddingStart="16dp"
+                tools:ignore="RtlSymmetry" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rv_gallery"
+            tools:listitem="@layout/item_gallery"
+            android:layout_marginBottom="20dp"/>
+    </LinearLayout>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:id="@+id/progressbar"
+        android:layout_gravity="center"/>
+
+</FrameLayout>
