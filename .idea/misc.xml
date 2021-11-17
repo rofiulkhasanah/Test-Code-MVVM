@@ -3,11 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android Dev File/Test Code/DOT/TestCodeMVVM/app/src/main/res/drawable/ic_icons8_around_the_globe.xml" value="0.1" />
+        <entry key="..\:/Android Dev File/Test Code/DOT/TestCodeMVVM/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1" />
+        <entry key="..\:/Android Dev File/Test Code/DOT/TestCodeMVVM/app/src/main/res/drawable/ic_travel.xml" value="0.1" />
         <entry key="..\:/Android Dev File/Test Code/DOT/TestCodeMVVM/app/src/main/res/layout-w1240dp/activity_login.xml" value="0.1" />
         <entry key="..\:/Android Dev File/Test Code/DOT/TestCodeMVVM/app/src/main/res/layout/activity_home.xml" value="0.19270833333333334" />
         <entry key="..\:/Android Dev File/Test Code/DOT/TestCodeMVVM/app/src/main/res/layout/activity_login.xml" value="0.1721311475409836" />
         <entry key="..\:/Android Dev File/Test Code/DOT/TestCodeMVVM/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Android Dev File/Test Code/DOT/TestCodeMVVM/app/src/main/res/layout/detail_item_gallery.xml" value="0.19270833333333334" />
+        <entry key="..\:/Android Dev File/Test Code/DOT/TestCodeMVVM/app/src/main/res/layout/detail_item_place_dialog.xml" value="0.1" />
         <entry key="..\:/Android Dev File/Test Code/DOT/TestCodeMVVM/app/src/main/res/layout/detail_place_dialog.xml" value="0.19270833333333334" />
         <entry key="..\:/Android Dev File/Test Code/DOT/TestCodeMVVM/app/src/main/res/layout/fragment_gallery.xml" value="0.19270833333333334" />
         <entry key="..\:/Android Dev File/Test Code/DOT/TestCodeMVVM/app/src/main/res/layout/fragment_place.xml" value="0.1" />
@@ -15,6 +19,7 @@
         <entry key="..\:/Android Dev File/Test Code/DOT/TestCodeMVVM/app/src/main/res/layout/item_gallery.xml" value="0.19270833333333334" />
         <entry key="..\:/Android Dev File/Test Code/DOT/TestCodeMVVM/app/src/main/res/layout/item_place.xml" value="0.19270833333333334" />
         <entry key="..\:/Android Dev File/Test Code/DOT/TestCodeMVVM/app/src/main/res/menu/bottom_nav_menu.xml" value="0.2" />
+        <entry key="..\:/Android Dev File/Test Code/DOT/TestCodeMVVM/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
       </map>
     </option>
   </component>

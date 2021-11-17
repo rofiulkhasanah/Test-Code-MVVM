@@ -10,6 +10,7 @@ import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
+import com.creartpro.testcodemvvm.R
 import com.creartpro.testcodemvvm.data.entities.User
 import com.creartpro.testcodemvvm.databinding.ActivityLoginBinding
 import com.creartpro.testcodemvvm.ui.view.home.HomeActivity
@@ -35,19 +36,10 @@ class LoginActivity : AppCompatActivity() {
         viewModel = ViewModelProvider(this, factory)[MainViewModel::class.java]
         emailFocus()
         passwordFocus()
-//        validationField()
+        validationField()
 
-        loginForm()
+//        loginForm()
     }
-
-//    1. Form email, terdapat validasi format email, jika error terdapat pesan
-//    dibawahnya
-//    2. Form password, terdapat validasi min 6 karakter, dan harus terdapat 1 karakter
-//    uppercase dan lowercase, jika error terdapat pesan dibawahnya
-//    3. Button submit, hanya aktif jika semua form memenuhi kriteria
-//    4. Setelah submit, muncul loading sekitar 3 detik, kemudian menuju ke halaman
-//    home
-//    5. Setelah berhasil login, buka aplikasi dari splash screen langsung menuju ke halaman home
 
     fun loginForm(){
         binding.apply {
@@ -69,20 +61,10 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    private val textWatcher = object: TextWatcher{
-        override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-        }
-
-        override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-        }
-
-        override fun afterTextChanged(p0: Editable?) {
-        }
-
-    }
-
     fun validationField(){
-        binding.btnLoginSubmit.isEnabled = emailFocus() && passwordFocus()
+        if(emailValidation() == null && passwordValidation() == null){
+            loginForm()
+        }
     }
 
     fun emailFocus(): Boolean{
