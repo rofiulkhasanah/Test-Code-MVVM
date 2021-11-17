@@ -62,8 +62,11 @@ class LoginActivity : AppCompatActivity() {
     }
 
     fun validationField(){
-        if(emailHelper == null && passwordHelper == null){
+        if(emailHelper == "null" && passwordHelper == "null"){
+            Log.d("validasi", "BISMILLAH")
             loginForm()
+        }else{
+            Log.d("validasi", "SEMANGAT")
         }
     }
 
@@ -71,7 +74,8 @@ class LoginActivity : AppCompatActivity() {
         binding.edtEmail.setOnFocusChangeListener { _, focused ->
             if(!focused){
                 binding.inputEmail.helperText = emailValidation()
-                emailHelper = emailValidation()
+                emailHelper = "${emailValidation()}"
+                Log.d("Email", emailHelper.toString())
             }
         }
     }
@@ -105,7 +109,8 @@ class LoginActivity : AppCompatActivity() {
             if(!focused){
                 with(binding){
                     binding.inputPassword.helperText = passwordValidation()
-                    passwordHelper = passwordValidation()
+                    passwordHelper = "${passwordValidation()}"
+                    Log.d("Password", passwordHelper.toString())
                 }
             }
         }
