@@ -24,8 +24,6 @@ import kotlinx.coroutines.launch
 class LoginActivity : AppCompatActivity() {
     lateinit var binding: ActivityLoginBinding
     lateinit var viewModel: MainViewModel
-    var emailHelper :String? = null
-    var passwordHelper :String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,9 +34,6 @@ class LoginActivity : AppCompatActivity() {
         viewModel = ViewModelProvider(this, factory)[MainViewModel::class.java]
         emailFocus()
         passwordFocus()
-        validationField()
-
-//        loginForm()
     }
 
     fun loginForm(){
@@ -62,11 +57,9 @@ class LoginActivity : AppCompatActivity() {
     }
 
     fun validationField(){
-        if(emailHelper == "null" && passwordHelper == "null"){
-            Log.d("validasi", "BISMILLAH")
+        if(binding.inputPassword.helperText == null && binding.inputEmail.helperText == null){
+            binding.btnLoginSubmit.isEnabled = true
             loginForm()
-        }else{
-            Log.d("validasi", "SEMANGAT")
         }
     }
 
@@ -74,8 +67,8 @@ class LoginActivity : AppCompatActivity() {
         binding.edtEmail.setOnFocusChangeListener { _, focused ->
             if(!focused){
                 binding.inputEmail.helperText = emailValidation()
-                emailHelper = "${emailValidation()}"
-                Log.d("Email", emailHelper.toString())
+                validationField()
+                Log.d("Email", emailValidation().toString())
             }
         }
     }
@@ -109,8 +102,8 @@ class LoginActivity : AppCompatActivity() {
             if(!focused){
                 with(binding){
                     binding.inputPassword.helperText = passwordValidation()
-                    passwordHelper = "${passwordValidation()}"
-                    Log.d("Password", passwordHelper.toString())
+                    validationField()
+                    Log.d("Password", passwordValidation().toString())
                 }
             }
         }
